@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/margin_5">
+
+        <RelativeLayout
+            android:id="@+id/relToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top"
+            android:paddingStart="@dimen/margin_12"
+            android:paddingEnd="@dimen/margin_12"
+            android:paddingTop="@dimen/margin_10"
+            android:background="@color/black_light">
+
+            <ImageView
+                android:id="@+id/imgCogmac"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/margin_6"
+                android:src="@drawable/cogmac_logo" />
+
+            <TextView
+                android:id="@+id/appNameTv"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="BrewMac"
+                android:textColor="#ffffff"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/satisfy_font"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/workspace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linear_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:text="Valve Configuration" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Database Sync" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/button_layout"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp">
+
+                        <Button
+                            android:id="@+id/btn_valve"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="8dp"
+                            android:text="Valve Bev-Name" />
+
+                        <Button
+                            android:id="@+id/btn_2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_valve"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="8dp"
+                            android:text="122338 Brew22" />
+
+                        <Button
+                            android:id="@+id/btn_3"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/btn_2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="8dp"
+                            android:text="Valve Bev-Name" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:hint="Valve:122338" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:hint="Bev-Name :" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:hint="Set-Qty :" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:hint="Set Flow Rate :" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:hint="Visibility :" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear_parent"
+                android:text="Update" />
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

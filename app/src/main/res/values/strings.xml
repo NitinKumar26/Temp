@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BrewMac</string>
+    <string name="cd_background_image">Background Image</string>
+    <string name="cd_cogmac_logo">CogMacLogo</string>
+    <string name="cd_backdrop_carousel">Carousel Backdrop</string>
+</resources>

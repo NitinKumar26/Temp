@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_cocktails"
+        android:title="Cocktails"
+        android:icon="@drawable/cocktails_un"/>
+
+    <item
+        android:id="@+id/menu_singles"
+        android:title="Singles"
+        android:icon="@drawable/singles_un"/>
+
+    <item android:id="@+id/menu_mocktails"
+        android:title="Mocktails"
+        android:icon="@drawable/moctails_un"/>
+
+
+</menu>

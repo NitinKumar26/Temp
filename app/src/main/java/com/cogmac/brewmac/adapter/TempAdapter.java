@@ -1,19 +1,13 @@
 package com.cogmac.brewmac.adapter;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.Menu;
 
-import com.cogmac.brewmac.MainActivity;
-import com.cogmac.brewmac.MenuActivity;
+import com.cogmac.brewmac.activity.MenuActivity;
 import com.cogmac.brewmac.R;
-import com.cogmac.brewmac.TempActivity;
-import com.cogmac.brewmac.fragment.CarouselItemFragment;
 import com.cogmac.brewmac.fragment.VerticalCarouselItemFragment;
-import com.cogmac.brewmac.utils.CarouselLinearLayout;
 import com.cogmac.brewmac.utils.ListConfig;
 import com.cogmac.brewmac.utils.VerticalCarouselLinearLayout;
 

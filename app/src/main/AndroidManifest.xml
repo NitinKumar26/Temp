@@ -10,12 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".SettingsActivity"
+        <activity android:name=".activity.SettingsActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape"
+            android:label="SettingsActivity"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:screenOrientation="landscape"
             android:theme="@style/Theme.AppCompat.NoActionBar">
 
@@ -28,14 +29,29 @@
         </activity>
 
         <activity
-            android:name=".TempActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".activity.TempActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="TempActivity"
+            android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".MenuActivity"
+            android:name=".activity.MenuActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".CustomActivity" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="MenuActivity"/>
+        <activity android:name=".activity.CustomActivity"
+            android:label="CustomActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity android:name=".activity.BeveragesActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape"
+            android:label="BeveragesActivity"/>
+
+        <activity android:name=".activity.RecipeActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape"
+            android:label="RecipeActivity"/>
 
     </application>
 

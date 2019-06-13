@@ -6,20 +6,26 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cogmac.brewmac.MenuActivity;
+import com.cogmac.brewmac.activity.BeveragesActivity;
+import com.cogmac.brewmac.activity.CustomActivity;
+import com.cogmac.brewmac.activity.MenuActivity;
 import com.cogmac.brewmac.R;
-import com.cogmac.brewmac.SettingsActivity;
+import com.cogmac.brewmac.activity.RecipeActivity;
+import com.cogmac.brewmac.activity.SettingsActivity;
 import com.cogmac.brewmac.utils.CarouselLinearLayout;
 import com.cogmac.brewmac.utils.ListConfig;
 
 public class CarouselItemFragment extends Fragment {
+
+
+
 
     private static final String POSITION = "position";
     private static final String SCALE = "scale";
@@ -32,7 +38,6 @@ public class CarouselItemFragment extends Fragment {
         b.putFloat(SCALE, scale);
         return Fragment.instantiate(context, CarouselItemFragment.class.getName(),  b);
     }
-
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -52,13 +57,15 @@ public class CarouselItemFragment extends Fragment {
 
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         final int position;
+        position = this.getArguments().getInt(POSITION);
+        float scale = this.getArguments().getFloat(SCALE);
+        Log.e("positionNew", String.valueOf(position));
+
+
         if (this.getArguments() != null) {
-            position = this.getArguments().getInt(POSITION);
-            float scale = this.getArguments().getFloat(SCALE);
             TextView itemName = view.findViewById(R.id.pager_textview);
             CarouselLinearLayout root = view.findViewById(R.id.root_container);
             imageView = view.findViewById(R.id.imgLogo);
@@ -70,10 +77,26 @@ public class CarouselItemFragment extends Fragment {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), MenuActivity.class));
-
+                switch (position){
+                    case 1:
+                        startActivity(new Intent(getContext(), MenuActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(getContext(), CustomActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(getContext(), BeveragesActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(getContext(), RecipeActivity.class));
+                        break;
+                    case 5:
+                        startActivity(new Intent(getContext(), SettingsActivity.class));
+                        break;
+                }
             }
         });
+
 
     }
 }

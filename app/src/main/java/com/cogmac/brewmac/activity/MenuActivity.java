@@ -1,4 +1,4 @@
-package com.cogmac.brewmac;
+package com.cogmac.brewmac.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,10 +7,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 
+import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.adapter.DrinksAdapter;
 import com.cogmac.brewmac.adapter.TempAdapter;
 import com.cogmac.brewmac.model.DrinkItem;
-import com.cogmac.brewmac.model.TempModel;
 import com.cogmac.brewmac.utils.VerticalViewpager;
 
 import java.util.ArrayList;

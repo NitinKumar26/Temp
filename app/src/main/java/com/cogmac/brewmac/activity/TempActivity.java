@@ -1,4 +1,4 @@
-package com.cogmac.brewmac;
+package com.cogmac.brewmac.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,7 @@ import android.util.DisplayMetrics;
 import com.cogmac.brewmac.model.TempModel;
 import com.cogmac.brewmac.utils.VerticalViewpager;
 import java.util.ArrayList;
+import com.cogmac.brewmac.R;
 
 public class TempActivity extends AppCompatActivity {
     public static VerticalViewpager verticalViewpager;

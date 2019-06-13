@@ -4,8 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
-import com.cogmac.brewmac.MainActivity;
+import com.cogmac.brewmac.activity.MainActivity;
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.fragment.CarouselItemFragment;
 import com.cogmac.brewmac.utils.CarouselLinearLayout;
@@ -34,20 +35,25 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
                 scale = BIG_SCALE;
             else
                 scale = SMALL_SCALE;
-                position = position % ListConfig.categoryIconsList.length;
+
+            position = position % ListConfig.categoryIconsList.length;
+
+            Log.e("position", String.valueOf(position));
+            //Log.e("listLength", String.valueOf(ListConfig.categoryIconsList.length));
 
 
         } catch (Exception e) {
             e.printStackTrace();
         }
         return CarouselItemFragment.newInstance(context, position, scale);
+
     }
 
     @Override
     public int getCount() {
         int count = 0;
         try {
-            count = MainActivity.count * MainActivity.LOOPS;
+            count = ListConfig.categoryIconsList.length * MainActivity.LOOPS;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -71,7 +77,10 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
     @Override
     public void onPageSelected(int position) {
 
+
+
     }
+
 
     @Override
     public void onPageScrollStateChanged(int state) {
@@ -85,6 +94,6 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
     }
 
     private String getFragmentTag(int position) {
-        return "android:switcher:" + context.main_viewpager.getId() + ":" + position;
+        return "android:switcher:" + MainActivity.main_viewpager.getId() + ":" + position;
     }
 }

@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cogmac.brewmac.R;
-import com.cogmac.brewmac.TempActivity;
+import com.cogmac.brewmac.activity.TempActivity;
 import com.cogmac.brewmac.utils.CarouselLinearLayout;
 import com.cogmac.brewmac.utils.ListConfig;
 

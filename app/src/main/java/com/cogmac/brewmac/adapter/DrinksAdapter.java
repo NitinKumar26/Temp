@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cogmac.brewmac.R;
@@ -43,10 +44,20 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.ViewHolder
 
     class ViewHolder extends RecyclerView.ViewHolder{
         private TextView tvDrinkTitle;
+        RelativeLayout relativeLayout;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvDrinkTitle = itemView.findViewById(R.id.title);
+            relativeLayout = itemView.findViewById(R.id.drink_relative);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    relativeLayout.setBackground(v.getContext().getResources().getDrawable(R.drawable.drink_item_selection_background));
+
+                }
+            });
         }
     }
 }

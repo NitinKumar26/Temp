@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         int pageMargin = ((metrics.widthPixels / 3) * 2);
         main_viewpager.setPageMargin(-pageMargin);
 
-
         final CarouselPagerAdapter pagerAdapter = new CarouselPagerAdapter(this, getSupportFragmentManager());
         main_viewpager.setAdapter(pagerAdapter);
         pagerAdapter.notifyDataSetChanged();

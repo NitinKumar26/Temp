@@ -67,7 +67,7 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
+                <FrameLayout
                     android:id="@+id/nav_panel"
                     android:layout_width="250dp"
                     android:layout_height="match_parent"
@@ -77,11 +77,11 @@
 
                     <com.cogmac.brewmac.utils.VerticalViewpager
                         android:id="@+id/vertical_viewpager"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent" />
 
 
-                </RelativeLayout>
+                </FrameLayout>
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerView_drinks"

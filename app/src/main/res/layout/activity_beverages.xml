@@ -2,10 +2,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:id="@+id/appBar"
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
                 android:id="@+id/imgCogmac"
                 android:layout_width="51dp"
                 android:layout_height="51dp"
+                android:contentDescription="@string/cd_cogmac_logo"
                 android:padding="@dimen/margin_6"
                 android:src="@drawable/cogmac_logo" />
 
@@ -36,7 +38,7 @@
                 android:id="@+id/appNameTv"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="BrewMac"
+                android:text="@string/app_name"
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:gravity="center_horizontal"
@@ -46,7 +48,7 @@
 
         </RelativeLayout>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:id="@+id/beverage_name"
@@ -61,15 +63,11 @@
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Beverage Name"
+            android:text="@string/beverage_name_default"
             android:textColor="#ffffff"
             android:textSize="20sp"
             android:padding="16dp"
             android:layout_gravity="center_horizontal"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
     </LinearLayout>
     
@@ -83,36 +81,45 @@
         android:layout_margin="16dp"
         android:orientation="vertical">
 
-
         <EditText
             android:id="@+id/edTv_bev_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Beverage Name :"/>
+            android:hint="@string/beverage_name"
+            android:inputType="text"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/edTv_bev_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description :"/>
+            android:hint="@string/description"
+            android:inputType="text"
+            tools:ignore="Autofill"/>
 
         <EditText
             android:id="@+id/edTv_bev_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type :"/>
+            android:hint="@string/type"
+            android:inputType="text"
+            tools:ignore="Autofill"/>
 
         <EditText
             android:id="@+id/edTv_bev_sub_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Sub Type :"/>
+            android:hint="@string/sub_type"
+            android:inputType="text"
+            tools:ignore="Autofill"/>
 
         <EditText
             android:id="@+id/edTv_bev_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Image :"/>
+            android:hint="@string/image"
+            android:inputType="text"
+            tools:ignore="Autofill"/>
 
     </LinearLayout>
 
@@ -127,7 +134,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/button_gradient"
-            android:text="Add/Update"
+            android:text="@string/add_update"
+            style="?android:attr/buttonBarButtonStyle"
             android:textColor="#ffffff"
             android:textAllCaps="false"
             android:textSize="16sp"
@@ -136,7 +144,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Clear for New Entry"
+            android:text="@string/clear_for_new_entry"
+            style="?android:attr/buttonBarButtonStyle"
             android:textSize="16sp"
             android:background="@drawable/button_gradient"
             android:padding="12dp"
@@ -146,17 +155,12 @@
 
     </LinearLayout>
 
-
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_rubbish_bin"
         android:layout_alignParentBottom="true"
         app:fabSize="auto"
         android:layout_margin="32dp"/>
-
-
-
-
 
 </RelativeLayout>

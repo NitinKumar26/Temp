@@ -1,7 +1,9 @@
 package com.cogmac.brewmac.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.cogmac.brewmac.R;
 
 public class SettingsActivity extends AppCompatActivity {

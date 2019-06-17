@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,6 +31,7 @@
             android:background="@color/black_light">
 
             <ImageView
+                android:contentDescription="@string/cd_cogmac_logo"
                 android:id="@+id/imgCogmac"
                 android:layout_width="51dp"
                 android:layout_height="51dp"
@@ -41,7 +43,7 @@
                 android:id="@+id/appNameTv"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="BrewMac"
+                android:text="@string/app_name"
                 android:textColor="#ffffff"
                 android:textSize="24sp"
                 android:gravity="center_horizontal"
@@ -59,7 +61,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <LinearLayout
                 android:id="@+id/linear_parent"
                 android:layout_width="match_parent"
@@ -75,18 +76,19 @@
                     android:weightSum="2">
 
                     <Button
+                        style="?android:attr/button"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_marginEnd="16dp"
                         android:layout_weight="1"
-                        android:text="Valve Configuration" />
+                        android:text="@string/valve_configuration" />
 
                     <Button
+                        style="?android:attr/button"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Database Sync" />
-
+                        android:text="@string/database_sync" />
 
                 </LinearLayout>
 
@@ -108,7 +110,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="8dp"
-                            android:text="Valve Bev-Name" />
+                            android:text="@string/valve_bev_name" />
 
                         <Button
                             android:id="@+id/btn_2"
@@ -117,7 +119,7 @@
                             android:layout_below="@id/btn_valve"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="8dp"
-                            android:text="122338 Brew22" />
+                            android:text="@string/_122338_brew22" />
 
                         <Button
                             android:id="@+id/btn_3"
@@ -126,7 +128,7 @@
                             android:layout_below="@id/btn_2"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="8dp"
-                            android:text="Valve Bev-Name" />
+                            android:text="@string/valve_bev_name" />
 
                     </RelativeLayout>
 
@@ -141,31 +143,41 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
-                            android:hint="Valve:122338" />
+                            android:hint="@string/valve_122338"
+                            android:inputType="number"
+                            tools:ignore="Autofill"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
-                            android:hint="Bev-Name :" />
+                            android:hint="@string/beverage_name"
+                            android:inputType="text"
+                            tools:ignore="Autofill"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
-                            android:hint="Set-Qty :" />
+                            android:hint="@string/set_qty"
+                            android:inputType="number"
+                            tools:ignore="Autofill"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
-                            android:hint="Set Flow Rate :" />
+                            android:hint="@string/set_flow_rate"
+                            android:inputType="numberDecimal"
+                            tools:ignore="Autofill"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
-                            android:hint="Visibility :" />
+                            android:hint="@string/visibility"
+                            android:inputType="text"
+                            tools:ignore="Autofill"/>
 
                     </LinearLayout>
 
@@ -178,11 +190,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear_parent"
-                android:text="Update" />
+                android:text="@string/update" />
 
         </RelativeLayout>
-
-
 
     </LinearLayout>
 

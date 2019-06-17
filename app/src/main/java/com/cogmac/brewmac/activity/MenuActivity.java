@@ -1,10 +1,11 @@
 package com.cogmac.brewmac.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.adapter.DrinksAdapter;
 import com.cogmac.brewmac.model.DrinkItem;
@@ -23,7 +24,7 @@ public class MenuActivity extends AppCompatActivity {
 
         final ArrayList<DrinkItem> mDrinksItemList = new ArrayList<>();
         DrinkItem drink;
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 12; i++){
             drink = new DrinkItem("Drink" + i);
             mDrinksItemList.add(drink);
         }

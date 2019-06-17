@@ -1,19 +1,21 @@
 package com.cogmac.brewmac.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-import com.cogmac.brewmac.model.TempModel;
-import com.cogmac.brewmac.utils.VerticalViewpager;
-import java.util.ArrayList;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.cogmac.brewmac.R;
+import com.cogmac.brewmac.utils.VerticalViewpager;
 
 public class TempActivity extends AppCompatActivity {
     public static VerticalViewpager verticalViewpager;
+    /*
     public static final int LOOPS = 4;
     public static final int COUNT = 3;
     public static final int FIRST_PAGE = 3;
+    */
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,11 +25,12 @@ public class TempActivity extends AppCompatActivity {
         //Finding Vertical View Pager
         verticalViewpager = findViewById(R.id.vertical_viewpager);
 
+        /*
         ArrayList<TempModel> tempModels = new ArrayList<>();
         tempModels.add(new TempModel(R.drawable.ic_menu));
         tempModels.add(new TempModel(R.drawable.ic_custom));
         tempModels.add(new TempModel(R.drawable.ic_settings));
-
+        */
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);

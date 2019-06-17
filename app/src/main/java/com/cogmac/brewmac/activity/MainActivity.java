@@ -1,12 +1,11 @@
 package com.cogmac.brewmac.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.adapter.CarouselPagerAdapter;
@@ -14,7 +13,7 @@ import com.cogmac.brewmac.adapter.CarouselPagerAdapter;
 public class MainActivity extends AppCompatActivity {
 
     public static ViewPager main_viewpager;
-    public static final int count = 5;
+    //public static final int count = 5;
     public static final int LOOPS = 2;
     public static final int FIRST_PAGE = 4;
 

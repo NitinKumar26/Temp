@@ -13,6 +13,7 @@
     android:focusable="true">
 
     <ImageView
+        android:contentDescription="@string/carousel_item"
         android:id="@+id/imgLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"

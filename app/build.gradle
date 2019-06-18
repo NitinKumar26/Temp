@@ -34,6 +34,8 @@ dependencies {
     //BumpTech Glide Image Library
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //Android Arsenal Circular Button Library
+    implementation 'com.github.markushi:circlebutton:1.1'
 
     //Android JUnit Test Runner Library
     testImplementation 'junit:junit:4.12'

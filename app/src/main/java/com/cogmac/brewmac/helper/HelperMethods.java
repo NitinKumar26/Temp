@@ -1,4 +1,4 @@
-package com.cogmac.brewmac.utils;
+package com.cogmac.brewmac.helper;
 
 import android.content.Context;
 import android.view.GestureDetector;
@@ -32,7 +32,7 @@ public class HelperMethods {
         }
 
         @Override
-        public boolean onInterceptTouchEvent(@NonNull  RecyclerView recyclerView, @NonNull MotionEvent motionEvent) {
+        public boolean onInterceptTouchEvent(@NonNull RecyclerView recyclerView, @NonNull MotionEvent motionEvent) {
             View child = recyclerView.findChildViewUnder(motionEvent.getX(),motionEvent.getY());
             if (child!=null && clickListener != null && gestureDetector.onTouchEvent(motionEvent)){
                 clickListener.onClick(recyclerView.getChildAdapterPosition(child));
@@ -50,4 +50,5 @@ public class HelperMethods {
 
         }
     }
+
 }

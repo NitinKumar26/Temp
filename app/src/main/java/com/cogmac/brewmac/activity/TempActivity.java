@@ -10,7 +10,7 @@ import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.utils.VerticalViewpager;
 
 public class TempActivity extends AppCompatActivity {
-    public static VerticalViewpager verticalViewpager;
+    private static VerticalViewpager verticalViewpager;
     /*
     public static final int LOOPS = 4;
     public static final int COUNT = 3;

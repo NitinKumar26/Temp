@@ -3,5 +3,5 @@
     <font
         app:fontStyle="normal"
         app:fontWeight="400"
-        app:font="@font/satisfy_regular" />
+        app:font="@font/signika_light_font" />
 </font-family>

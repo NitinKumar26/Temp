@@ -2,8 +2,9 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="80dp"
-    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="120dp"
     android:layout_margin="8dp">
 
     <RelativeLayout
@@ -12,16 +13,30 @@
         android:layout_height="match_parent"
         android:background="#181E1E">
 
+        <ImageView
+            android:id="@+id/icon_drink"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/ic_beer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"/>
+
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Drink Title"
-            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:fontFamily="@font/satisfy_regular"/>
+            android:layout_marginBottom="12dp"
+            android:textSize="11sp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:fontFamily="@font/signika_light"
+            tools:ignore="SmallSp" />
 
     </RelativeLayout>
 

@@ -3,16 +3,16 @@
 
     <item
         android:id="@+id/menu_cocktails"
-        android:title="Cocktails"
+        android:title="@string/cocktails"
         android:icon="@drawable/cocktails_un"/>
 
     <item
         android:id="@+id/menu_singles"
-        android:title="Singles"
+        android:title="@string/singles"
         android:icon="@drawable/singles_un"/>
 
     <item android:id="@+id/menu_mocktails"
-        android:title="Mocktails"
+        android:title="@string/mocktails"
         android:icon="@drawable/moctails_un"/>
 
 

@@ -27,8 +27,6 @@ public class CarouselItemFragment extends Fragment {
 
     private static final String POSITION = "position";
     private static final String SCALE = "scale";
-    //private static final String DRAWABLE_RESOURCE = "resource";
-    public ImageView imageView;
 
     public static Fragment newInstance(Context context, int pos, float scale){
         Bundle b = new Bundle();
@@ -65,7 +63,8 @@ public class CarouselItemFragment extends Fragment {
             Log.e("positionNew", String.valueOf(position));
             TextView itemName = view.findViewById(R.id.pager_textview);
             CarouselLinearLayout root = view.findViewById(R.id.root_container);
-            imageView = view.findViewById(R.id.imgLogo);
+            //private static final String DRAWABLE_RESOURCE = "resource";
+            ImageView imageView = view.findViewById(R.id.imgLogo);
             imageView.setImageResource(ListConfig.categoryIconsList[position]);
             itemName.setText(ListConfig.categoryNameList[position]);
             root.setScaleBoth(scale);

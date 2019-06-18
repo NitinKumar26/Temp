@@ -8,51 +8,10 @@
     android:background="@drawable/main_background">
 
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:id="@+id/appBar"
+    <include layout="@layout/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:elevation="@dimen/margin_5">
-
-
-
-        <RelativeLayout
-            android:id="@+id/relToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_gravity="top"
-            android:paddingStart="@dimen/margin_12"
-            android:paddingEnd="@dimen/margin_12"
-            android:paddingTop="@dimen/margin_10"
-            android:background="@color/black_light">
-
-            <ImageView
-                android:id="@+id/imgCogmac"
-                android:layout_width="?android:attr/actionBarSize"
-                android:layout_height="?android:attr/actionBarSize"
-                android:layout_centerVertical="true"
-                android:src="@drawable/cogmac_logo" />
-
-
-            <TextView
-                android:id="@+id/appNameTv"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="BrewMac"
-                android:textColor="#ffffff"
-                android:textSize="20dp"
-                android:gravity="center_horizontal"
-                android:fontFamily="@font/satisfy_font"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                tools:ignore="SpUsage" />
-
-        </RelativeLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_alignParentTop="true"/>
 
 
     <androidx.viewpager.widget.ViewPager

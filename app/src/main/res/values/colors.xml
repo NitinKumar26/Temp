@@ -7,4 +7,6 @@
     <color name="black_transparent">#88000000</color>
     <color name="black_light">#2c2c2c</color>
     <color name="color_sky_blue">#00F4F6</color>
+    <color name="colorYellow">#ffff00</color>
+    <color name="colorViolet">#ba68c8</color>
 </resources>

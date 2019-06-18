@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_cart_serial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="#ffffff"
+        tools:text="1."
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/signika_regular"/>
+
+    <TextView
+        android:id="@+id/tv_cart_drinkName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="#ffffff"
+        tools:text="Apple Margarita"
+        android:fontFamily="@font/signika_regular"/>
+
+
+</LinearLayout>

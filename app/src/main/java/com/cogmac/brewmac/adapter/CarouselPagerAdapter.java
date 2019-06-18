@@ -1,6 +1,8 @@
 package com.cogmac.brewmac.adapter;
 
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -27,6 +29,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
         this.context = context;
     }
 
+    @NonNull
     @Override
     public Fragment getItem(int position) {
         // make the first pager bigger than others

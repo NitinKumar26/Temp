@@ -8,4 +8,5 @@ public class ListConfig {
 
     public static final int[] categoryIconsList = new int[] { R.drawable.ic_menu,
             R.drawable.ic_custom , R.drawable.beverages_icon, R.drawable.recipes_icon, R.drawable.ic_settings};
+
 }

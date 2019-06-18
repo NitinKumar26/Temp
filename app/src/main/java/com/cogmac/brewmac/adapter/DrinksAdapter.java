@@ -3,6 +3,7 @@ package com.cogmac.brewmac.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.ViewHolder> {
 
-    private ArrayList<DrinkItem> mDrinksList;
+    private final ArrayList<DrinkItem> mDrinksList;
 
     public DrinksAdapter(ArrayList<DrinkItem> mDrinksList) {
         this.mDrinksList = mDrinksList;
@@ -34,7 +35,7 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         DrinkItem drink = mDrinksList.get(i);
         viewHolder.tvDrinkTitle.setText(drink.getmDrinkTitle());
-
+        viewHolder.iconImage.setImageResource(drink.getmDrinkIcon());
     }
 
     @Override
@@ -43,21 +44,15 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.ViewHolder
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView tvDrinkTitle;
-        RelativeLayout relativeLayout;
+        private final TextView tvDrinkTitle;
+        final RelativeLayout relativeLayout;
+        ImageView iconImage;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvDrinkTitle = itemView.findViewById(R.id.title);
             relativeLayout = itemView.findViewById(R.id.drink_relative);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    relativeLayout.setBackground(v.getContext().getResources().getDrawable(R.drawable.drink_item_selection_background));
-
-                }
-            });
+            iconImage = itemView.findViewById(R.id.icon_drink);
         }
     }
 }

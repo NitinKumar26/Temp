@@ -9,14 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.model.CartItem;
+import com.cogmac.brewmac.model.DrinkItem;
+
 import java.util.ArrayList;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
-    private ArrayList<CartItem> mCartItemsList;
+    private ArrayList<DrinkItem> mCartItemsList;
     private Context mContext;
 
-    public CartAdapter(Context context, ArrayList<CartItem> mCartItemsList) {
+    public CartAdapter(Context context, ArrayList<DrinkItem> mCartItemsList) {
         this.mCartItemsList = mCartItemsList;
         this.mContext = context;
     }
@@ -29,17 +31,27 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     }
 
     @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        CartItem item = mCartItemsList.get(position);
-        holder.tvDrinkName.setText(item.getmDrinkname());
+        DrinkItem item = mCartItemsList.get(position);
+        holder.tvDrinkName.setText(item.getmDrinkTitle());
         holder.tvCartSerial.setText(String.valueOf(position + 1));
         if (position % 2 == 0){
-            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorViolet));
-            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorViolet));
+            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorPath4));
+            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorPath4));
         }
         else{
-            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorYellow));
-            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorYellow));
+            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorPath1));
+            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorPath1));
         }
     }
 
@@ -56,7 +68,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             tvCartSerial = itemView.findViewById(R.id.tv_cart_serial);
         }
     }
-    public void setItems(ArrayList<CartItem> cartItems) {
+    public void setItems(ArrayList<DrinkItem> cartItems) {
         this.mCartItemsList = cartItems;
     }
 }

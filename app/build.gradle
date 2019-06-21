@@ -37,6 +37,9 @@ dependencies {
     //Android Arsenal Circular Button Library
     implementation 'com.github.markushi:circlebutton:1.1'
 
+    //JitPack Library to change vector group color at runtime
+    implementation 'com.github.devsideal:VectorChildFinder:1.0.0'   
+
     //Android JUnit Test Runner Library
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

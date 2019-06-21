@@ -1,127 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/app_bar_layout"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:layout_alignParentTop="true"/>
-
-    <LinearLayout
-        android:id="@+id/beverage_name"
-        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_gradient"
-        android:layout_below="@id/appBar"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
+        android:fitsSystemWindows="true">
 
-        <TextView
-            android:id="@+id/text"
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background_second" />
+
+        <include
+            android:id="@+id/action_bar"
+            layout="@layout/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/beverage_name"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/action_bar"
+            android:layout_margin="16dp"
+            android:background="@drawable/button_top_header"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="16dp"
+                android:text="@string/beverage_name_default"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
+                tools:ignore="SpUsage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rel_bev_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/beverage_name_default"
-            android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:padding="16dp"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_below="@id/action_bar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/beverage_name"
+            android:orientation="vertical">
 
-    </LinearLayout>
-    
-    <LinearLayout
-        android:id="@+id/rel_bev_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@id/appBar"
-        android:layout_toEndOf="@id/beverage_name"
-        android:layout_margin="16dp"
-        android:orientation="vertical">
+            <EditText
+                android:id="@+id/edTv_bev_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_border"
+                android:hint="@string/beverage_name"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                tools:ignore="Autofill" />
 
-        <EditText
-            android:id="@+id/edTv_bev_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/beverage_name"
-            android:inputType="text"
-            tools:ignore="Autofill" />
+            <EditText
+                android:id="@+id/edTv_bev_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_border"
+                android:hint="@string/description"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                tools:ignore="Autofill" />
 
-        <EditText
-            android:id="@+id/edTv_bev_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/description"
-            android:inputType="text"
-            tools:ignore="Autofill"/>
+            <EditText
+                android:id="@+id/edTv_bev_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_border"
+                android:hint="@string/type"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                tools:ignore="Autofill" />
 
-        <EditText
-            android:id="@+id/edTv_bev_type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/type"
-            android:inputType="text"
-            tools:ignore="Autofill"/>
+            <EditText
+                android:id="@+id/edTv_bev_sub_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_border"
+                android:hint="@string/sub_type"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                tools:ignore="Autofill" />
 
-        <EditText
-            android:id="@+id/edTv_bev_sub_type"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/sub_type"
-            android:inputType="text"
-            tools:ignore="Autofill"/>
+            <EditText
+                android:id="@+id/edTv_bev_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border"
+                android:hint="@string/image"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                tools:ignore="Autofill" />
 
-        <EditText
-            android:id="@+id/edTv_bev_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/image"
-            android:inputType="text"
-            tools:ignore="Autofill"/>
+        </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp">
-
-        <Button
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_gradient"
-            android:text="@string/add_update"
-            style="?android:attr/buttonBarButtonStyle"
-            android:textColor="#ffffff"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:padding="12dp"/>
+            android:layout_below="@id/rel_bev_details"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
 
-        <Button
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient"
+                android:padding="12dp"
+                android:text="@string/add_update"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/button_gradient"
+                android:padding="12dp"
+                android:text="@string/clear_for_new_entry"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/clear_for_new_entry"
-            style="?android:attr/buttonBarButtonStyle"
-            android:textSize="16sp"
-            android:background="@drawable/button_gradient"
-            android:padding="12dp"
-            android:textColor="#ffffff"
-            android:textAllCaps="false"
-            android:layout_marginStart="12dp"/>
+            android:layout_below="@id/rel_bev_details"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:fabSize="auto"
+            app:srcCompat="@drawable/ic_rubbish_bin" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_rubbish_bin"
-        android:layout_alignParentBottom="true"
-        app:fabSize="auto"
-        android:layout_margin="32dp"/>
-
-</RelativeLayout>
+</ScrollView>

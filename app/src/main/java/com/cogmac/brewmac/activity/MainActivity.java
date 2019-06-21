@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static ViewPager main_viewpager;
     //public static final int count = 5;
-    public static final int LOOPS = 2;
-    public static final int FIRST_PAGE = 4;
+    public static final int LOOPS = 1;
+    public static final int FIRST_PAGE = 1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         main_viewpager = findViewById(R.id.main_viewpager);
-
 
         //Set ViewPager Margin According to Device's Display
         DisplayMetrics metrics = new DisplayMetrics();

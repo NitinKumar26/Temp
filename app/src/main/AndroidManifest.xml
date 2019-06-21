@@ -19,15 +19,12 @@
             android:name=".activity.MainActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".activity.TempActivity"
             android:theme="@style/AppTheme.NoActionBar"
@@ -38,10 +35,13 @@
             android:name=".activity.MenuActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
-            android:label="MenuActivity"/>
+            android:label=""
+            android:parentActivityName=".activity.MenuActivity"/>
         <activity android:name=".activity.CustomActivity"
             android:label="CustomActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".activity.BeveragesActivity"
             android:theme="@style/AppTheme.NoActionBar"

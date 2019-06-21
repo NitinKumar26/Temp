@@ -39,7 +39,6 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
             else
                 scale = SMALL_SCALE;
 
-            position = position % ListConfig.categoryIconsList.length;
 
             Log.e("position", String.valueOf(position));
             //Log.e("listLength", String.valueOf(ListConfig.categoryIconsList.length));

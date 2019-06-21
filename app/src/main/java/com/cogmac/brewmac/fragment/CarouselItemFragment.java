@@ -9,11 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.activity.BeveragesActivity;
 import com.cogmac.brewmac.activity.CustomActivity;
@@ -24,7 +22,6 @@ import com.cogmac.brewmac.utils.CarouselLinearLayout;
 import com.cogmac.brewmac.utils.ListConfig;
 
 public class CarouselItemFragment extends Fragment {
-
     private static final String POSITION = "position";
     private static final String SCALE = "scale";
 

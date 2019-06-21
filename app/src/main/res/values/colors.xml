@@ -9,4 +9,9 @@
     <color name="color_sky_blue">#00F4F6</color>
     <color name="colorYellow">#ffff00</color>
     <color name="colorViolet">#ba68c8</color>
+    <color name="colorPath4">#1afdff</color>
+    <color name="colorPath3">#00e4e6</color>
+    <color name="colorPath2">#00b1b3</color>
+    <color name="colorPath1">#4dfeff</color>
+    <color name="colorWhite">#ffffff</color>
 </resources>

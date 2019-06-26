@@ -25,11 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".activity.TempActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="TempActivity"
-            android:screenOrientation="landscape"/>
 
         <activity
             android:name=".activity.MenuActivity"
@@ -52,6 +47,7 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
             android:label="RecipeActivity"/>
+        <activity android:name=".activity.FavouritesActivity" />
 
     </application>
 

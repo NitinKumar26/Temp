@@ -1,7 +1,5 @@
 package com.cogmac.brewmac.adapter;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -14,17 +12,18 @@ import com.cogmac.brewmac.fragment.CarouselItemFragment;
 import com.cogmac.brewmac.utils.CarouselLinearLayout;
 import com.cogmac.brewmac.utils.ListConfig;
 
-public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
+import java.util.Objects;
 
+public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
     private final static float BIG_SCALE = 1.0f;
-    private final static float SMALL_SCALE = 0.6f;
+    private final static float SMALL_SCALE = 0.7f;
     private final static float DIFF_SCALE = BIG_SCALE - SMALL_SCALE;
     private final MainActivity context;
     private final FragmentManager fragmentManager;
     private float scale;
 
-    public CarouselPagerAdapter(MainActivity context, FragmentManager fm) {
-        super(fm);
+    public CarouselPagerAdapter(@NonNull FragmentManager fm, int behavior, MainActivity context) {
+        super(fm, behavior);
         this.fragmentManager = fm;
         this.context = context;
     }
@@ -39,10 +38,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
             else
                 scale = SMALL_SCALE;
 
-
-            Log.e("position", String.valueOf(position));
-            //Log.e("listLength", String.valueOf(ListConfig.categoryIconsList.length));
-
+            position = position % 6;
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -55,7 +51,7 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
     public int getCount() {
         int count = 0;
         try {
-            count = ListConfig.categoryIconsList.length * MainActivity.LOOPS;
+            count = ListConfig.categoryIconsList.length;
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -79,8 +75,6 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
     @Override
     public void onPageSelected(int position) {
 
-
-
     }
 
 
@@ -89,13 +83,17 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
 
     }
 
-    @SuppressWarnings("ConstantConditions")
     private CarouselLinearLayout getRootView(int position) {
-        return (CarouselLinearLayout) fragmentManager.findFragmentByTag(this.getFragmentTag(position))
-                .getView().findViewById(R.id.root_container);
+        return (CarouselLinearLayout) Objects.requireNonNull(Objects.requireNonNull(fragmentManager.findFragmentByTag(this.getFragmentTag(position)))
+                .getView()).findViewById(R.id.root_container);
     }
 
     private String getFragmentTag(int position) {
         return "android:switcher:" + MainActivity.main_viewpager.getId() + ":" + position;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return super.getItemId(position);
     }
 }

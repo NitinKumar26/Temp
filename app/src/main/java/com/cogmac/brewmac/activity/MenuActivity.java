@@ -1,9 +1,6 @@
 package com.cogmac.brewmac.activity;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,17 +17,12 @@ import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.adapter.CartAdapter;
 import com.cogmac.brewmac.adapter.DrinksAdapter;
 import com.cogmac.brewmac.helper.HelperMethods;
-import com.cogmac.brewmac.model.CartItem;
 import com.cogmac.brewmac.model.DrinkItem;
 import com.devs.vectorchildfinder.VectorChildFinder;
 import com.devs.vectorchildfinder.VectorDrawableCompat;
-
 import java.util.ArrayList;
 
 public class MenuActivity extends AppCompatActivity {
-    public static final int LOOPS = 4;
-    public static final int COUNT = 1;
-    public static final int FIRST_PAGE = 3;
     private ArrayList<DrinkItem> cartItems;
     private RecyclerView mCartRecyclerView;
     private CartAdapter cartAdapter;
@@ -121,9 +113,9 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (cartItems == null || cartItems.isEmpty()){
                     Toast.makeText(MenuActivity.this, "Please add drinks", Toast.LENGTH_SHORT).show();
-                }else{
-                    //TODO:SHOW PROGRESS DIALOG WHILE THE DRINKS ARE POURING.
-                }
+                }/*else{
+
+                }*/
             }
         });
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.cogmac.brewmac.utils.VerticalCarouselLinearLayout
+<com.cogmac.brewmac.utils.CarouselLinearLayout
     android:gravity="center"
     android:orientation="vertical"
     android:id="@+id/root_container"
@@ -10,24 +10,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:layout_margin="12dp">
 
     <ImageView
-        android:contentDescription="@string/carousel_item"
         android:id="@+id/imgLogo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:srcCompat="@drawable/ic_settings"
-        android:layout_centerHorizontal="true" />
+        android:contentDescription="@string/carousel_item"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/ic_settings" />
 
     <TextView
-        android:textSize="@dimen/font_24"
-        android:textStyle="bold"
-        android:textColor="@color/color_sky_blue"
+        android:textSize="20sp"
         android:id="@+id/pager_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorWhite"
         android:fontFamily="@font/signika_regular"
-        tools:text="ITEM NAME" />
+        android:textStyle="bold"
+        tools:textColor="#000000"
+        tools:text="Settings"
+        android:layout_margin="8dp"/>
 
-</com.cogmac.brewmac.utils.VerticalCarouselLinearLayout>
+</com.cogmac.brewmac.utils.CarouselLinearLayout>

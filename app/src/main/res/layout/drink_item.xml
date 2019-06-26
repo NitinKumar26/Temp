@@ -15,15 +15,14 @@
         android:id="@+id/drink_relative"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <ImageView
             android:id="@+id/icon_drink"
             android:layout_width="60dp"
             android:layout_height="60dp"
             app:srcCompat="@drawable/ic_beer"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"/>
-
+            android:layout_marginTop="12dp"
+            android:contentDescription="TODO" />
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
@@ -37,8 +36,8 @@
             android:textColor="@color/colorWhite"
             android:textSize="11sp"
             tools:ignore="SmallSp"
+            android:padding="2dp"
             tools:text="Drink Title" />
-
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

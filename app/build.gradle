@@ -34,11 +34,12 @@ dependencies {
     //BumpTech Glide Image Library
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
     //Android Arsenal Circular Button Library
     implementation 'com.github.markushi:circlebutton:1.1'
 
     //JitPack Library to change vector group color at runtime
-    implementation 'com.github.devsideal:VectorChildFinder:1.0.0'   
+    implementation 'com.github.devsideal:VectorChildFinder:1.0.0'
 
     //Android JUnit Test Runner Library
     testImplementation 'junit:junit:4.12'

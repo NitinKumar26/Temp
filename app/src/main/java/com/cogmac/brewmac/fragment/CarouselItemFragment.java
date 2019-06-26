@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.activity.BeveragesActivity;
 import com.cogmac.brewmac.activity.CustomActivity;
+import com.cogmac.brewmac.activity.FavouritesActivity;
 import com.cogmac.brewmac.activity.MenuActivity;
 import com.cogmac.brewmac.activity.RecipeActivity;
 import com.cogmac.brewmac.activity.SettingsActivity;
@@ -44,23 +45,20 @@ public class CarouselItemFragment extends Fragment {
         if (container == null){
             return null;
         }
-
         return inflater.inflate(R.layout.main_carousel_item, container, false);
     }
 
-
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        //super.onViewCreated(view, savedInstanceState);
         final int position;
 
         if (this.getArguments() != null) {
             position = this.getArguments().getInt(POSITION);
+            Log.e("position", String.valueOf(position));
             float scale = this.getArguments().getFloat(SCALE);
-            Log.e("positionNew", String.valueOf(position));
-            TextView itemName = view.findViewById(R.id.pager_textview);
+            final TextView itemName = view.findViewById(R.id.pager_textview);
             CarouselLinearLayout root = view.findViewById(R.id.root_container);
-            //private static final String DRAWABLE_RESOURCE = "resource";
             ImageView imageView = view.findViewById(R.id.imgLogo);
             imageView.setImageResource(ListConfig.categoryIconsList[position]);
             itemName.setText(ListConfig.categoryNameList[position]);
@@ -69,15 +67,18 @@ public class CarouselItemFragment extends Fragment {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    switch (position){
-                        case 1:
+                    switch (position) {
+                        case 0:
                             startActivity(new Intent(getContext(), MenuActivity.class));
                             break;
+                        case 1:
+                            startActivity(new Intent(getContext(), BeveragesActivity.class));
+                            break;
                         case 2:
-                            startActivity(new Intent(getContext(), CustomActivity.class));
+                            startActivity(new Intent(getContext(), FavouritesActivity.class));
                             break;
                         case 3:
-                            startActivity(new Intent(getContext(), BeveragesActivity.class));
+                            startActivity(new Intent(getContext(), CustomActivity.class));
                             break;
                         case 4:
                             startActivity(new Intent(getContext(), RecipeActivity.class));
@@ -89,9 +90,5 @@ public class CarouselItemFragment extends Fragment {
                 }
             });
         }
-
-
-
-
     }
 }

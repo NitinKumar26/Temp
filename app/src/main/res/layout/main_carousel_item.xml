@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/signika_regular"
         android:layout_gravity="center"
-        tools:text="Settings"/>
+        tools:text="Settings"
+        tools:textColor="@color/colorBlack"/>
 
 </com.cogmac.brewmac.utils.CarouselLinearLayout>

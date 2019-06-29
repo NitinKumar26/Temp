@@ -4,15 +4,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.adapter.CartAdapter;
 import com.cogmac.brewmac.adapter.DrinksAdapter;
@@ -35,6 +34,8 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         Toolbar toolbar = findViewById(R.id.my_toolbar);
+        TextView appNameTv = findViewById(R.id.appNameTv);
+        appNameTv.setText(this.getResources().getString(R.string.menu));
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
         if (ab != null)
@@ -42,7 +43,7 @@ public class MenuActivity extends AppCompatActivity {
 
         final ImageView glass = findViewById(R.id.glass);
         mCartRecyclerView = findViewById(R.id.recyclerView_cart);
-        RecyclerView mDrinksRecyclerView = findViewById(R.id.recyclerView_drinks);
+        final RecyclerView mDrinksRecyclerView = findViewById(R.id.recyclerView_drinks);
         final VectorChildFinder vector = new VectorChildFinder(MenuActivity.this, R.drawable.ic_glass, glass);
 
         Button mPourButton = findViewById(R.id.btn_pour);
@@ -59,8 +60,8 @@ public class MenuActivity extends AppCompatActivity {
         mDrinksItemList.add(new DrinkItem("Bellini", R.drawable.ic_glass_champagne));
         mDrinksItemList.add(new DrinkItem("Bee's Knees", R.drawable.ic_glass_new));
         mDrinksItemList.add(new DrinkItem("Black & Blue", R.drawable.ic_glass_new2));
-
-        mDrinksRecyclerView.setAdapter(new DrinksAdapter(mDrinksItemList));
+        final DrinksAdapter mDrinksAdapter = new DrinksAdapter(mDrinksItemList);
+        mDrinksRecyclerView.setAdapter(mDrinksAdapter);
         mDrinksRecyclerView.addOnItemTouchListener(new HelperMethods.RecyclerTouchListener(MenuActivity.this, new HelperMethods.ClickListener() {
             @Override
             public void onClick(int position) {

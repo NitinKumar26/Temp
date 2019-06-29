@@ -3,7 +3,7 @@
     package="com.cogmac.brewmac">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -13,12 +13,14 @@
         <activity android:name=".activity.SettingsActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
+            android:parentActivityName=".activity.MainActivity"
             android:label="SettingsActivity"/>
 
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -30,8 +32,8 @@
             android:name=".activity.MenuActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
-            android:label=""
             android:parentActivityName=".activity.MenuActivity"/>
+
         <activity android:name=".activity.CustomActivity"
             android:label="CustomActivity"
             android:screenOrientation="landscape"
@@ -41,14 +43,20 @@
         <activity android:name=".activity.BeveragesActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
-            android:label="BeveragesActivity"/>
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Beverages"/>
 
         <activity android:name=".activity.RecipeActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
-            android:label="RecipeActivity"/>
-        <activity android:name=".activity.FavouritesActivity" />
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Recipe"/>
 
+        <activity android:name=".activity.FavouritesActivity"
+            android:screenOrientation="landscape"
+            android:parentActivityName=".activity.MainActivity"
+            android:label="Favourites"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

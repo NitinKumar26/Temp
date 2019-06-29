@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
@@ -11,7 +12,7 @@
 
         <include layout="@layout/app_bar_layout"
             android:layout_width="match_parent"
-            android:layout_height="?android:attr/actionBarSize"
+            android:layout_height="wrap_content"
             android:layout_gravity="top"/>
 
         <RelativeLayout
@@ -95,53 +96,46 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:layout_marginEnd="12dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        tools:ignore="Autofill">
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/valve_122338"
-                            android:inputType="number"
-                            tools:ignore="Autofill"/>
+                            android:inputType="number" />
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/beverage_name"
-                            android:inputType="text"
-                            tools:ignore="Autofill"/>
+                            android:inputType="text" />
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/set_qty"
-                            android:inputType="number"
-                            tools:ignore="Autofill"/>
+                            android:inputType="number" />
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/set_flow_rate"
-                            android:inputType="numberDecimal"
-                            tools:ignore="Autofill"/>
+                            android:inputType="numberDecimal" />
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/visibility"
-                            android:inputType="text"
-                            tools:ignore="Autofill"/>
+                            android:inputType="text" />
 
                     </LinearLayout>
-
-
                 </LinearLayout>
-
             </LinearLayout>
 
             <TextView
@@ -151,10 +145,5 @@
                 android:text="@string/update" />
 
         </RelativeLayout>
-
     </LinearLayout>
-
-
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

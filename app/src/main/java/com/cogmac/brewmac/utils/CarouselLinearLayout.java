@@ -30,4 +30,5 @@ public class CarouselLinearLayout extends LinearLayout {
         this.scale = scale;
         invalidate();
     }
+
 }

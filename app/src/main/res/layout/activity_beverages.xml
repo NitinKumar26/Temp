@@ -16,7 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/background_second"
-            android:contentDescription="TODO" />
+            android:layout_below="@id/action_bar"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/cd_background_image" />
 
         <include
             android:id="@+id/action_bar"
@@ -57,7 +59,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_toEndOf="@id/beverage_name"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="Autofill">
 
             <EditText
                 android:id="@+id/edTv_bev_name"
@@ -72,8 +75,7 @@
                 android:paddingEnd="12dp"
                 android:paddingBottom="8dp"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                tools:ignore="Autofill" />
+                android:textColorHint="@color/colorWhite" />
 
             <EditText
                 android:id="@+id/edTv_bev_description"
@@ -88,24 +90,20 @@
                 android:paddingEnd="12dp"
                 android:paddingBottom="8dp"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                tools:ignore="Autofill" />
+                android:textColorHint="@color/colorWhite" />
 
-            <EditText
-                android:id="@+id/edTv_bev_type"
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_bev_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:background="@drawable/edittext_border"
-                android:hint="@string/type"
                 android:inputType="text"
                 android:paddingStart="12dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="12dp"
                 android:paddingBottom="8dp"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                tools:ignore="Autofill" />
+                android:spinnerMode="dropdown" />
 
             <EditText
                 android:id="@+id/edTv_bev_sub_type"
@@ -120,8 +118,7 @@
                 android:paddingEnd="12dp"
                 android:paddingBottom="8dp"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                tools:ignore="Autofill" />
+                android:textColorHint="@color/colorWhite" />
 
             <EditText
                 android:id="@+id/edTv_bev_image"
@@ -135,8 +132,7 @@
                 android:paddingEnd="12dp"
                 android:paddingBottom="8dp"
                 android:textColor="@color/colorWhite"
-                android:textColorHint="@color/colorWhite"
-                tools:ignore="Autofill" />
+                android:textColorHint="@color/colorWhite" />
 
         </LinearLayout>
 
@@ -156,7 +152,8 @@
                 android:text="@string/add_update"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 style="?android:attr/buttonBarButtonStyle"

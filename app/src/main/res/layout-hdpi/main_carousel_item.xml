@@ -11,18 +11,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
     android:focusable="true"
-    android:layout_margin="12dp">
+    android:layout_margin="12dp"
+    android:layout_gravity="center">
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:contentDescription="@string/carousel_item"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/ic_settings" />
 
     <TextView
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:id="@+id/pager_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

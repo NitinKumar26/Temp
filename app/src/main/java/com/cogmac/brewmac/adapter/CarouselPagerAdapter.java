@@ -11,21 +11,18 @@ import com.cogmac.brewmac.activity.MainActivity;
 import com.cogmac.brewmac.fragment.CarouselItemFragment;
 import com.cogmac.brewmac.utils.CarouselLinearLayout;
 import com.cogmac.brewmac.utils.ListConfig;
-
 import java.util.Objects;
 
 public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPager.OnPageChangeListener {
     private final static float BIG_SCALE = 1.0f;
     private final static float SMALL_SCALE = 0.7f;
     private final static float DIFF_SCALE = BIG_SCALE - SMALL_SCALE;
-    private final MainActivity context;
     private final FragmentManager fragmentManager;
     private float scale;
 
-    public CarouselPagerAdapter(@NonNull FragmentManager fm, int behavior, MainActivity context) {
+    public CarouselPagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
         this.fragmentManager = fm;
-        this.context = context;
     }
 
     @NonNull
@@ -38,12 +35,10 @@ public class CarouselPagerAdapter extends FragmentPagerAdapter implements ViewPa
             else
                 scale = SMALL_SCALE;
 
-            position = position % 6;
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return CarouselItemFragment.newInstance(context, position, scale);
+        return CarouselItemFragment.newInstance(position, scale);
 
     }
 

@@ -8,9 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.cogmac.brewmac.R;
-import com.cogmac.brewmac.model.CartItem;
 import com.cogmac.brewmac.model.DrinkItem;
-
 import java.util.ArrayList;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
@@ -44,24 +42,26 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         DrinkItem item = mCartItemsList.get(position);
         holder.tvDrinkName.setText(item.getmDrinkTitle());
-        holder.tvCartSerial.setText(String.valueOf(position + 1));
+        String index = String.valueOf(position + 1);
+        String serial = mContext.getResources().getString(R.string.serialText, index);
+        holder.tvCartSerial.setText(serial);
         if (position % 2 == 0){
-            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorPath4));
-            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorPath4));
+            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorWhite));
+            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorYellow));
         }
         else{
-            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorPath1));
-            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorPath1));
+            holder.tvCartSerial.setTextColor(mContext.getResources().getColor(R.color.colorWhite));
+            holder.tvDrinkName.setTextColor(mContext.getResources().getColor(R.color.colorViolet));
         }
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount(){
         return mCartItemsList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
-        TextView tvDrinkName, tvCartSerial;
+        private TextView tvDrinkName, tvCartSerial;
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvDrinkName = itemView.findViewById(R.id.tv_cart_drinkName);

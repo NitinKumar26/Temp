@@ -1,6 +1,8 @@
 package com.cogmac.brewmac.activity;
 
 import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,5 +19,7 @@ public class CustomActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
         if (ab != null)
             ab.setDisplayHomeAsUpEnabled(true);
+        TextView appNameTv = findViewById(R.id.appNameTv);
+        appNameTv.setText(this.getResources().getString(R.string.custom));
     }
 }

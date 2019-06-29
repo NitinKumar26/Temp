@@ -26,11 +26,13 @@ public class CarouselItemFragment extends Fragment {
     private static final String POSITION = "position";
     private static final String SCALE = "scale";
 
-    public static Fragment newInstance(Context context, int pos, float scale){
+    public static Fragment newInstance(int pos, float scale){
+        CarouselItemFragment fragment = new CarouselItemFragment();
         Bundle b = new Bundle();
         b.putInt(POSITION, pos);
         b.putFloat(SCALE, scale);
-        return Fragment.instantiate(context, CarouselItemFragment.class.getName(),  b);
+        fragment.setArguments(b);
+        return fragment;
     }
 
     @Override
@@ -53,9 +55,10 @@ public class CarouselItemFragment extends Fragment {
         //super.onViewCreated(view, savedInstanceState);
         final int position;
 
+
         if (this.getArguments() != null) {
             position = this.getArguments().getInt(POSITION);
-            Log.e("position", String.valueOf(position));
+            Log.e("carouselPosition", String.valueOf(position));
             float scale = this.getArguments().getFloat(SCALE);
             final TextView itemName = view.findViewById(R.id.pager_textview);
             CarouselLinearLayout root = view.findViewById(R.id.root_container);
@@ -63,8 +66,9 @@ public class CarouselItemFragment extends Fragment {
             imageView.setImageResource(ListConfig.categoryIconsList[position]);
             itemName.setText(ListConfig.categoryNameList[position]);
             root.setScaleBoth(scale);
+
             //Set OnClickListener on the Fragment
-            view.setOnClickListener(new View.OnClickListener() {
+            root.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     switch (position) {
@@ -91,4 +95,6 @@ public class CarouselItemFragment extends Fragment {
             });
         }
     }
+
+
 }

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    style="@style/AppBackground">
 
     <LinearLayout
+        android:id="@+id/linear_super"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <include layout="@layout/app_bar_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"/>
 
         <RelativeLayout
             android:id="@+id/workspace"
@@ -25,7 +22,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -40,14 +36,19 @@
                         android:layout_height="match_parent"
                         android:layout_marginEnd="16dp"
                         android:layout_weight="1"
-                        android:text="@string/valve_configuration" />
+                        android:text="@string/valve_configuration"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/colorPrimary"/>
 
                     <Button
                         style="?android:attr/button"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/database_sync" />
+                        android:text="@string/database_sync"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        />
 
                 </LinearLayout>
 
@@ -69,6 +70,8 @@
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="8dp"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/colorWhite"
                             android:text="@string/valve_bev_name" />
 
                         <Button
@@ -78,6 +81,8 @@
                             android:layout_below="@id/btn_valve"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="8dp"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/colorWhite"
                             android:text="@string/_122338_brew22" />
 
                         <Button
@@ -87,6 +92,8 @@
                             android:layout_below="@id/btn_2"
                             android:layout_centerHorizontal="true"
                             android:layout_margin="8dp"
+                            android:background="@color/colorPrimary"
+                            android:textColor="@color/colorWhite"
                             android:text="@string/valve_bev_name" />
 
                     </RelativeLayout>
@@ -104,46 +111,140 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/valve_122338"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:textColorHint="@color/colorWhite"
+                            android:textColor="@color/colorWhite"
+                            android:padding="8dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/edittext_border"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/beverage_name"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/edittext_border"
+                            android:textColorHint="@color/colorWhite"
+                            android:padding="8dp"
+                            android:layout_marginBottom="4dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/edittext_border"
                             android:hint="@string/set_qty"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:padding="8dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:textColor="@color/colorWhite"
+                            android:textColorHint="@color/colorWhite" />
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/set_flow_rate"
-                            android:inputType="numberDecimal" />
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/colorWhite"
+                            android:textColor="@color/colorWhite"
+                            android:background="@drawable/edittext_border"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:padding="8dp"
+                            android:layout_marginBottom="4dp"/>
 
                         <EditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
                             android:hint="@string/visibility"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:background="@drawable/edittext_border"
+                            android:textColor="@color/colorWhite"
+                            android:textColorHint="@color/colorWhite"
+                            android:padding="8dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"/>
 
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/linear_parent"
-                android:text="@string/update" />
-
         </RelativeLayout>
+
     </LinearLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_below="@id/linear_super"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:textSize="24sp"
+        android:text="@string/update"
+        android:fontFamily="@font/signika_bold"
+        android:gravity="center"
+        android:drawableEnd="@drawable/ic_update_white_48dp"
+        android:padding="8dp"
+        android:drawablePadding="12dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_update"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test_buttons"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/signika_bold"
+            android:textSize="16sp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/one_sec"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/edittext_border"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/two_sec"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/edittext_border"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/three_sec"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/edittext_border"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/five_sec"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/edittext_border"/>
+    </LinearLayout>
+
+</RelativeLayout>

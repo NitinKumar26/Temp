@@ -39,6 +39,11 @@
     <string name="recipe">Recipe</string>
     <string name="settings">Settings</string>
     <string name="serialText">%1$s.</string>
+    <string name="test_buttons">Test Buttons:</string>
+    <string name="one_sec">1sec</string>
+    <string name="two_sec">2sec</string>
+    <string name="three_sec">3sec</string>
+    <string name="five_sec">5sec</string>
 
     <string-array name="bev_types_array">
         <item>Non-Alcoholic</item>

@@ -6,13 +6,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.cogmac.brewmac.R;
 import com.cogmac.brewmac.model.DrinkItem;
-
 import java.util.ArrayList;
 
 public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.ViewHolder> {
@@ -46,8 +43,7 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.ViewHolder
     class ViewHolder extends RecyclerView.ViewHolder{
         private final TextView tvDrinkTitle;
         final RelativeLayout relativeLayout;
-        ImageView iconImage;
-
+        private ImageView iconImage;
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvDrinkTitle = itemView.findViewById(R.id.title);

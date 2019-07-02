@@ -19,6 +19,6 @@ public class SettingsActivity extends AppCompatActivity {
         if (ab != null)
             ab.setDisplayHomeAsUpEnabled(true);
         TextView appNameTv = findViewById(R.id.appNameTv);
-        appNameTv.setText(this.getResources().getString(R.string.settings));
+        appNameTv.setText(SettingsActivity.this.getResources().getString(R.string.settings));
     }
 }

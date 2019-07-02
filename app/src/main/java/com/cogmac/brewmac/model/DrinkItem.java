@@ -4,6 +4,10 @@ public class DrinkItem {
     private  String mDrinkTitle;
     private  int mDrinkIcon;
 
+    public DrinkItem(){
+
+    }
+
     public DrinkItem(String mDrinkTitle, int mDrinkIcon) {
         this.mDrinkTitle = mDrinkTitle;
         this.mDrinkIcon = mDrinkIcon;
@@ -45,7 +49,7 @@ public class DrinkItem {
         if(obj == null || obj.getClass()!= this.getClass())
             return false;
 
-        // type casting of the argument.
+        // type conversion of the argument.
         DrinkItem drinkItem = (DrinkItem) obj;
 
         // comparing the state of argument with
